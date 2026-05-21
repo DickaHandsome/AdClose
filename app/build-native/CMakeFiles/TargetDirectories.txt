@@ -1,3 +1,0 @@
-/sdcard/AndroidCSProjects/AdClose/app/build-native/CMakeFiles/native_hook.dir
-/sdcard/AndroidCSProjects/AdClose/app/build-native/CMakeFiles/edit_cache.dir
-/sdcard/AndroidCSProjects/AdClose/app/build-native/CMakeFiles/rebuild_cache.dir
