@@ -189,4 +189,14 @@ dependencies {
     implementation(libs.appcenterAnalytics)
     implementation(libs.appcenterCrashes)
     implementation(libs.mpandroidchart)
+
+    // Compose
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.ui)
+    implementation(libs.compose.ui.graphics)
+    implementation(libs.compose.ui.tooling.preview)
+    implementation(libs.compose.material3)
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.runtime)
+    implementation(libs.compose.animation)
 }

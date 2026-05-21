@@ -267,13 +267,12 @@ class VipKillerEngine(
         }
 
         fun loadPendingHooks(targetPackage: String): List<PendingHook> {
-            val fileName = FILE_PREFIX_PENDING + targetPackage + ".json"
-            val raw = HookPrefs.readFileText(fileName)
+            val raw = HookPrefs.getString("vipkiller_pending_$targetPackage", null)
             if (raw.isNullOrBlank()) {
-                Log.w(TAG, "loadPendingHooks: file '$fileName' is blank or missing")
+                Log.w(TAG, "loadPendingHooks: no pending hooks for $targetPackage")
                 return emptyList()
             }
-            Log.d(TAG, "loadPendingHooks: read ${raw.length} chars from $fileName")
+            Log.d(TAG, "loadPendingHooks: read ${raw.length} chars for $targetPackage")
             return try {
                 json.decodeFromString<List<PendingHook>>(raw)
             } catch (e: Exception) {
@@ -284,8 +283,7 @@ class VipKillerEngine(
 
         private fun savePendingHooks(targetPackage: String, hooks: List<PendingHook>) {
             val content = json.encodeToString(hooks)
-            val fileName = FILE_PREFIX_PENDING + targetPackage + ".json"
-            HookPrefs.writeFileText(fileName, content)
+            HookPrefs.setString("vipkiller_pending_$targetPackage", content)
         }
 
         fun updatePendingHook(targetPackage: String, updated: PendingHook) {

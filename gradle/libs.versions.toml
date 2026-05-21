@@ -27,6 +27,8 @@ mpandroidchart = "v3.1.0"
 kotlinxSerialization = "1.10.0"
 kotlinSerializationPlugin = "2.3.10"
 brotli = "0.1.2"
+composeBom = "2025.05.00"
+composeCompiler = "1.6.5"
 
 [libraries]
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
@@ -56,6 +58,14 @@ appcenterCrashes = { module = "com.microsoft.appcenter:appcenter-crashes", versi
 mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
 kotlinxSerializationJson = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 brotli-dec = { group = "org.brotli", name = "dec", version.ref = "brotli" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-foundation = { module = "androidx.compose.foundation:foundation" }
+compose-runtime = { module = "androidx.compose.runtime:runtime" }
+compose-animation = { module = "androidx.compose.animation:animation" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "androidApplicationPlugin" }
